@@ -1,0 +1,11 @@
+httpx
+fastapi
+sqlalchemy
+asyncio
+pytest
+alembic
+dotenv
+uvicorn
+'pydantic[email]'
+psycopg2
+PyJWT
