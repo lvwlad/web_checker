@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from models import Base
@@ -11,5 +13,7 @@ Base.metadata.create_all(engine)
 
 app.include_router(users_router)
 app.include_router(monitors_router)
+
+app.mount("/", StaticFiles(directory=Path(__file__).parent / "static", html=True), name="static")
 
 
