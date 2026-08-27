@@ -6,6 +6,6 @@ pytest
 alembic
 dotenv
 uvicorn
-'pydantic[email]'
+pydantic[email]
 psycopg2
 PyJWT
