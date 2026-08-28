@@ -1,5 +1,5 @@
 FROM python
-WORKDIR .
-COPY .env, src/*
+WORKDIR /app
+COPY . .
 RUN pip install -r dependencies.txt
 CMD ["uvicorn", "src/main:app"]
