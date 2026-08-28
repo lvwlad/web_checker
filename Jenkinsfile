@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'сборка'
-                sh 'docker build .'
+               script {
+                    // Плагин сам соберет образ, используя Docker хоста или агента
+                    def customImage = docker.build("my-image-name:${env.BUILD_ID}")
+                }
             }
         }
     }
